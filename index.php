@@ -40,20 +40,35 @@
     class Food extends Prodotto {
         public $scadenza;
         public $peso;
-    }
 
-    var_dump($Food);
+        public function __construct($_scadenza, $_peso){
+            $this->scadenza=$_scadenza;
+            $this->peso=$_peso;
+        }
+    }
 
     class Gioco extends Prodotto {
         public $materiale;
         public $provenienza;
+        
+        public function __construct($_materiale, $_provenienza){
+            $this->materiale=$_materiale;
+            $this->provenienza=$_provenienza;
+        }
     }
 
     class Cuccia extends Prodotto {
         public $dimensione;
         public $lavabile;
+        
+        public function __construct($_dimensione, $_lavabile){
+            $this->dimensione=$_dimensione;
+            $this->lavabile=$_lavabile;
+        }
     }
 
+        $pappa = new Food(2022-12-31, 10, "Umido", 2.99, "Acana", "cane", 781);
+        var_dump($pappa);
   
 
     class Cliente {
