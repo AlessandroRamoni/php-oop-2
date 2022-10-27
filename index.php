@@ -10,21 +10,24 @@
 
     <?php
 
-    class Prodotto {
-        public $nome;
-        public $prezzo;
-        public $marca;
-        public $razza;
-        public $id;
+    include_once __DIR__ . "Prodotto.php";
 
-        public function __construct($_nome, $_prezzo, $_marca, $_razza, $_id){
-            $this->nome=$_nome;
-            $this->prezzo=$_prezzo;
-            $this->marca=$_marca;
-            $this->razza=$_razza;
-            $this->id=$_id;
-        }
-    }
+
+     class Prodotto {
+         public $nome;
+         public $prezzo;
+         public $marca;
+         public $razza;
+         public $id;
+
+         public function __construct($_nome, $_prezzo, $_marca, $_razza, $_id){
+             $this->nome=$_nome;
+             $this->prezzo=$_prezzo;
+             $this->marca=$_marca;
+             $this->razza=$_razza;
+             $this->id=$_id;
+         }
+     }
 
     $crocchette = new Prodotto("Crocklife", 19.99, "Acana", "cane", 121);
     
@@ -32,10 +35,15 @@
 
     $cuccia = new Prodotto("CucciaDeluxe", 29.99, "RoditoriShop", "coniglio", 718);
 
-
+    echo "<pre>";
     var_dump($crocchette);
+    echo "</pre>";
+    echo "<pre>";
     var_dump($tiragraffi);
+    echo "</pre>";
+    echo "<pre>";
     var_dump($cuccia);
+    echo "</pre>";
 
     class Food extends Prodotto {
         public $scadenza;
